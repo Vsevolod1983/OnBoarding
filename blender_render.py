@@ -28,7 +28,6 @@ class ColorItem(bpy.types.PropertyGroup):
                  )
 
 class UiPanel(bpy.types.Panel):
-    """Creates a Panel in the Object properties window"""
     bl_label = "Render"
     bl_idname = "OBJECT_NAME"
     bl_space_type = 'PROPERTIES'
@@ -48,19 +47,6 @@ class ExampleRenderEngine(bpy.types.RenderEngine):
     bl_idname = 'TestRenderer'
     bl_label = "TestRenderer"
  
-#    def __init__(self)
-#    def update(self, data, scene):
-        #if len(context.scene.colors) == 0
-#            context.scene.colors.add()
-#    def render(self, scene)
-
-#    def preview_update(self, context, id)
-#    def preview_render(self)
-
-#    def view_update(self, context)
-#    def view_draw(self, context)
-#    def __del__(self)
-
     def render(self,scene):
         sx = scene.render.resolution_x
         sy = scene.render.resolution_y
